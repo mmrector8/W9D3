@@ -9,10 +9,15 @@ class View {
   setupBoard() {
     let grid = document.getElementById("grid")
     // create 3x3 grid, 9 li elements needed
-    for(let i=0; i < 9; i ++){
-      let newLi = document.createElement("li")
-      newLi.innerHTML = "hi Kaushal"
-      grid.appendChild(newLi);
+    let idx=0, count=0;
+    for(let i=0; i < 3; i++){
+      for (let j=0; j < 3; j++) {
+        let pos = [i, j]
+        let newLi = document.createElement("li")
+        newLi.dataset.indexNumber = pos;
+        newLi.innerHTML = "X"
+        grid.appendChild(newLi);
+      }
     }
   }
   

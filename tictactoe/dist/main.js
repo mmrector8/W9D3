@@ -25,7 +25,7 @@ eval("const View = __webpack_require__(/*! ./ttt-view.js */ \"./src/ttt-view.js\
   \*************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const Game = __webpack_require__(/*! ../ttt_node/game */ \"./ttt_node/game.js\");\n\nclass View {\n  constructor(game, el) {\n    this.game = game;\n    this.el = el;\n  }\n\n  setupBoard() {\n    let grid = document.getElementById(\"grid\")\n    // create 3x3 grid, 9 li elements needed\n    for(let i=0; i < 9; i ++){\n      let newLi = document.createElement(\"li\")\n      newLi.innerHTML = \"hi Kaushal\"\n      grid.appendChild(newLi);\n    }\n  }\n  \n  // bindEvents() {}\n\n  // handleClick(e) {}\n\n  // makeMove(square) {}\n\n}\n\nmodule.exports = View;\n\n\n//# sourceURL=webpack:///./src/ttt-view.js?");
+eval("const Game = __webpack_require__(/*! ../ttt_node/game */ \"./ttt_node/game.js\");\n\nclass View {\n  constructor(game, el) {\n    this.game = game;\n    this.el = el;\n  }\n\n  setupBoard() {\n    let grid = document.getElementById(\"grid\")\n    // create 3x3 grid, 9 li elements needed\n    let idx=0, count=0;\n    for(let i=0; i < 3; i++){\n      for (let j=0; j < 3; j++) {\n        let pos = [i, j]\n        let newLi = document.createElement(\"li\")\n        newLi.dataset.indexNumber = pos;\n        newLi.innerHTML = \"X\"\n        grid.appendChild(newLi);\n      }\n    }\n  }\n  \n  // bindEvents() {}\n\n  // handleClick(e) {}\n\n  // makeMove(square) {}\n\n}\n\nmodule.exports = View;\n\n\n//# sourceURL=webpack:///./src/ttt-view.js?");
 
 /***/ }),
 
