@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Your code here
   let newGame = new Game();
   let figure = document.querySelector(".ttt")
-  //let newView = new View(newGame, figure)
+  let newView = new View(newGame, figure)
 
   let ul = document.querySelector("#grid")
   console.log(ul)
