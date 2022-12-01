@@ -29,7 +29,9 @@ class View {
     let clickedLi = Array.from(e.target.data-index-number)
     alert("clicked!")
     this.game.playMove(clickedLi);
+    
   }
+
 
   // makeMove(square) {}
 
