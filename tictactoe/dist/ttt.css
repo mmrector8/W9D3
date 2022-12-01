@@ -15,3 +15,18 @@
 #grid > li:hover {
     background-color: rgb(232, 167, 255);
 }
+
+#grid > li.placed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    color: green;
+    font-size: 75px;
+}
+
+h1, figure {
+   display: flex;
+   justify-content: center; 
+   align-items: center;
+}

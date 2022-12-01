@@ -8,8 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let ul = document.querySelector("#grid")
   let newView = new View(newGame, ul)
 
-  
-  console.log(newView.handleClick)
+
   // ul.addEventListener("click", newView.handleClick)
   newView.bindEvents();
   // ul.addEventListener("click", ()=> {
