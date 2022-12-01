@@ -28,16 +28,31 @@ class View {
     
     e.stopPropagation();
     let clickedLi = JSON.parse(e.target.dataset.indexNumber)
-    this.game.playMove(clickedLi);
+    // this.game.playMove(clickedLi);
     this.makeMove(clickedLi)
   }
 
   makeMove(square) {
     //square =[0,0]
+    this.game.playMove(square);
     let currentP = this.game.currentPlayer //a mark
     let clicked = document.querySelector(`[data-index-number= "[${square}]"]`)
     clicked.innerHTML = currentP;
     clicked.className = "placed"
+    
+    if (this.game.isOver()) {
+      let result = document.createElement("h2");
+      if (this.game.winner()) {
+        result.innerHTML = `Player ${this.game.winner() } is the Winner`;
+      } else {
+        result.innerHTML = `Draw`;
+      }
+      let parent = document.getElementById("title");
+      parent.appendChild(result);
+    }
+    
+
+
   }
 
 }
