@@ -5,10 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // Your code here
   let newGame = new Game();
   let figure = document.querySelector(".ttt")
-  let newView = new View(newGame, figure)
-
   let ul = document.querySelector("#grid")
-  console.log(ul)
-  ul.addEventListener("click", handleClick)
+  let newView = new View(newGame, ul)
+
+  
+  console.log(newView.handleClick)
+  // ul.addEventListener("click", newView.handleClick)
+  newView.bindEvents();
+  // ul.addEventListener("click", ()=> {
+  //   console.log('clicked');
+  // })
 
 });
