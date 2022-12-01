@@ -25,15 +25,14 @@
     font-size: 75px;
 }
 
-h1, figure {
+h1, figure, h2 {
    display: flex;
    justify-content: center; 
    align-items: center;
    margin: auto;
 }
 
-figcaption {
-    font-size: 30px;
-    text-align: center;
-    padding: 2px;
+h2 {
+    padding: 30px;
 }
+
