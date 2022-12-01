@@ -29,4 +29,11 @@ h1, figure {
    display: flex;
    justify-content: center; 
    align-items: center;
+   margin: auto;
+}
+
+figcaption {
+    font-size: 30px;
+    text-align: center;
+    padding: 2px;
 }

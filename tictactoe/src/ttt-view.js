@@ -41,13 +41,13 @@ class View {
     clicked.className = "placed"
     
     if (this.game.isOver()) {
-      let result = document.createElement("h2");
+      let result = document.createElement("figcaption");
       if (this.game.winner()) {
         result.innerHTML = `Player ${this.game.winner() } is the Winner`;
       } else {
         result.innerHTML = `Draw`;
       }
-      let parent = document.getElementById("title");
+      let parent = document.getElementById("ttt");
       parent.appendChild(result);
     }
     
